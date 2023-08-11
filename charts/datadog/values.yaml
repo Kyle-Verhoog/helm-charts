@@ -24,7 +24,7 @@ commonLabels: {}
 ## GCR - use gcr.io/datadoghq (default)
 ## DockerHub - use docker.io/datadog
 ## AWS - use public.ecr.aws/datadog
-registry: gcr.io/datadoghq
+registry: docker.io/datadog
 
 datadog:
   # datadog.apiKey -- Your Datadog API key
@@ -817,7 +817,7 @@ clusterAgent:
     name: cluster-agent-dev
 
     # clusterAgent.image.tag -- Cluster Agent image tag to use
-    tag:
+    tag: 7.46.0
 
     # clusterAgent.image.digest -- Cluster Agent image digest to use, takes precedence over tag if specified
     digest: sha256:f7fc30865f8ae2247ddfd8280d1bb8f35870ac32cf5edaabd05438390eb47e07
@@ -841,7 +841,7 @@ clusterAgent:
     ## This boolean permits completely skipping this check.
     ## This is useful, for example, for custom tags that are not
     ## respecting semantic versioning.
-    doNotCheckTag:  # false
+    doNotCheckTag: true  # false
 
   # clusterAgent.securityContext -- Allows you to overwrite the default PodSecurityContext on the cluster-agent pods.
   securityContext: {}
