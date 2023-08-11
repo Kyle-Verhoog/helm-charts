@@ -814,13 +814,13 @@ clusterAgent:
   ## Define the Datadog Cluster-Agent image to work with
   image:
     # clusterAgent.image.name -- Cluster Agent image name to use (relative to `registry`)
-    name: cluster-agent
+    name: cluster-agent-dev
 
     # clusterAgent.image.tag -- Cluster Agent image tag to use
-    tag: 7.46.0
+    tag:
 
     # clusterAgent.image.digest -- Cluster Agent image digest to use, takes precedence over tag if specified
-    digest: ""
+    digest: sha256:f7fc30865f8ae2247ddfd8280d1bb8f35870ac32cf5edaabd05438390eb47e07
 
     # clusterAgent.image.repository -- Override default registry + image.name for Cluster Agent
     repository:
