@@ -389,7 +389,7 @@ datadog:
   remoteConfiguration:
     # datadog.remoteConfiguration.enabled -- Set to true to enable remote configuration.
     # Consider using remoteConfiguration.enabled instead
-    enabled: false
+    enabled: true
 
   ## Enable logs agent and provide custom configs
   logs:
@@ -820,7 +820,7 @@ clusterAgent:
     tag: 7.46.0
 
     # clusterAgent.image.digest -- Cluster Agent image digest to use, takes precedence over tag if specified
-    digest: sha256:f7fc30865f8ae2247ddfd8280d1bb8f35870ac32cf5edaabd05438390eb47e07
+    digest: sha256:805ca1f367d8bcd06c319e0852ac30bd6c62246537cc679968f9cb10fbc8bdc5
 
     # clusterAgent.image.repository -- Override default registry + image.name for Cluster Agent
     repository:
@@ -841,7 +841,7 @@ clusterAgent:
     ## This boolean permits completely skipping this check.
     ## This is useful, for example, for custom tags that are not
     ## respecting semantic versioning.
-    doNotCheckTag: true  # false
+    doNotCheckTag: true
 
   # clusterAgent.securityContext -- Allows you to overwrite the default PodSecurityContext on the cluster-agent pods.
   securityContext: {}
@@ -1942,4 +1942,4 @@ remoteConfiguration:
   # remoteConfiguration.enabled -- Set to true to enable remote configuration on the Cluster Agent (if set) and the node agent.
   # This will override `datadog.remoteConfiguration.enabled` and `clusterAgent.admissionController.remoteInstrumentation.enabled`.
   # Preferred way to enable Remote Configuration.
-  enabled: false
+  enabled: true
