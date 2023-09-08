@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  datadog:
+  - apiVersion: v1
+    appVersion: "7"
+    created: "2023-09-08T15:36:20.981974-04:00"
+    dependencies:
+    - condition: clusterAgent.metricsProvider.useDatadogMetrics
+      name: datadog-crds
+      repository: https://helm.datadoghq.com
+      tags:
+      - install-crds
+      version: 1.0.1
+    - condition: datadog.kubeStateMetricsEnabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 2.13.2
+    description: Datadog Agent
+    digest: 4423ce4a6e7f0a8daebd25749ccba65086941cd8f94f5f9b4cf9b794eb414d97
+    home: https://www.datadoghq.com
+    icon: https://datadog-live.imgix.net/img/dd_logo_70x75.png
+    keywords:
+    - monitoring
+    - alerting
+    - metric
+    maintainers:
+    - email: support@datadoghq.com
+      name: Datadog
+    name: datadog
+    sources:
+    - https://app.datadoghq.com/account/settings#agent/kubernetes
+    - https://github.com/DataDog/datadog-agent
+    urls:
+    - https://raw.githubusercontent.com/kyle-verhoog/helm-charts/apm-single-step-beta-without-rc/repo/datadog-3.35.1.tgz
+    version: 3.35.1
+generated: "2023-09-08T15:36:20.976182-04:00"
