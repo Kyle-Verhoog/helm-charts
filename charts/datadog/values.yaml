@@ -24,7 +24,7 @@ commonLabels: {}
 ## GCR - use gcr.io/datadoghq (default)
 ## DockerHub - use docker.io/datadog
 ## AWS - use public.ecr.aws/datadog
-registry: gcr.io/datadoghq
+registry: docker.io/datadog
 
 datadog:
   # datadog.apiKey -- Your Datadog API key
@@ -432,6 +432,11 @@ datadog:
     ## ref: https://github.com/DataDog/docker-dd-agent#tracing-from-the-host
     enabled: false
 
+    # datadog.apm.instrumentation.enabled -- Enable injecting the Datadog APM libraries into all Kubernetes deployments (beta).
+    ## This feature is in beta. It requires Cluster Agent 7.46+.
+    instrumentation:
+      enabled: false
+
     # datadog.apm.port -- Override the trace Agent port
 
     ## Note: Make sure your client is sending to the same UDP port.
@@ -809,7 +814,7 @@ clusterAgent:
   ## Define the Datadog Cluster-Agent image to work with
   image:
     # clusterAgent.image.name -- Cluster Agent image name to use (relative to `registry`)
-    name: cluster-agent
+    name: cluster-agent-dev
 
     # clusterAgent.image.tag -- Cluster Agent image tag to use
     tag: 7.47.0
@@ -1183,7 +1188,7 @@ fips:
     pullPolicy: IfNotPresent
 
     # fips.image.digest -- Define the FIPS sidecar image digest to use, takes precedence over `fips.image.tag` if specified.
-    digest: ""
+    digest: sha256:805ca1f367d8bcd06c319e0852ac30bd6c62246537cc679968f9cb10fbc8bdc5
 
     # fips.image.repository -- Override default registry + image.name for the FIPS sidecar container.
     repository:
@@ -1242,7 +1247,7 @@ agents:
     ## This boolean permits to completely skip this check.
     ## This is useful, for example, for custom tags that are not
     ## respecting semantic versioning
-    doNotCheckTag:  # false
+    doNotCheckTag:  true
 
     # agents.image.pullPolicy -- Datadog Agent image pull policy
     pullPolicy: IfNotPresent

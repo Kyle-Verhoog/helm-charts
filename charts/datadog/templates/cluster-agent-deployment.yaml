@@ -229,6 +229,10 @@ spec:
           {{- end }}
           - name: DD_REMOTE_CONFIGURATION_ENABLED
             value: {{ include "clusterAgent-remoteConfiguration-enabled" . | quote }}
+          {{- if .Values.datadog.apm.instrumentation.enabled }}
+          - name: DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_APM_ENABLED
+            value: "true"
+          {{- end }}
           {{- if .Values.datadog.clusterChecks.enabled }}
           - name: DD_CLUSTER_CHECKS_ENABLED
             value: {{ .Values.datadog.clusterChecks.enabled | quote }}
