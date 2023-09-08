@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.1.0
+* Update CRDs from Datadog Operator v1.1.0-rc.1 tag.
+
+## 1.0.1
+
+* Update CRDs from Datadog Operator v1.0.3.
+
+## 1.0.0
+
+* Default DatadogAgent stored version is `v2alpha1` to align with the GA of the Datadog Operator.
+
+## 0.6.1
+
+* Add missing `nodeLabelsAsTags` and `namespaceLabelsAsTags` to the v2alpha1 spec. 
+
+## 0.6.0
+
+* Support Certificate Manager.
+* Document conversion webhook configuration.
+
 ## 0.5.9
 
 * Updating DatadogMonitors CRD and DatadogAgents CRDs.

@@ -65,6 +65,7 @@ rules:
 {{- end }}
 - nonResourceURLs:
   - "/metrics"
+  - "/metrics/slis"
   verbs:
   - get
 - apiGroups:  # Kubelet connectivity
@@ -129,6 +130,7 @@ subjects:
 ---
 apiVersion: v1
 kind: ServiceAccount
+automountServiceAccountToken: {{ .Values.agents.rbac.automountServiceAccountToken }}
 metadata:
   name: {{ include "agents.serviceAccountName" . }}
   namespace: {{ .Release.Namespace }}

@@ -1,5 +1,41 @@
 # Datadog changelog
 
+## 0.15.16
+
+* Update private location image version to `1.38.0`.
+
+## 0.15.15
+
+* Update private location image version to `1.37.0`.
+
+## 0.15.14
+
+* Update private location image version to `1.36.0`.
+
+## 0.15.13
+
+* Update private location image version to `1.35.0`.
+
+## 0.15.12
+
+* Update private location image version to `1.34.1`.
+
+## 0.15.11
+
+* Update private location image version to `1.34.0`.
+
+## 0.15.10
+
+* Update private location image version to `1.33.0`.
+
+## 0.15.9
+
+* Fix commonLabels duplicated in Deployment.
+
+## 0.15.8
+
+* Update private location image version to `1.32.0`.
+
 ## 0.15.7
 
 * Update private location image version to `1.31.1`.
