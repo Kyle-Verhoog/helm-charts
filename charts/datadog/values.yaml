@@ -820,7 +820,7 @@ clusterAgent:
     tag: 7.47.0
 
     # clusterAgent.image.digest -- Cluster Agent image digest to use, takes precedence over tag if specified
-    digest: ""
+    digest: sha256:40f9f1838bb36ac4f03de49419ee486fbb26304c83f62b93a47b80bafb8f1309
 
     # clusterAgent.image.repository -- Override default registry + image.name for Cluster Agent
     repository:
@@ -1188,7 +1188,7 @@ fips:
     pullPolicy: IfNotPresent
 
     # fips.image.digest -- Define the FIPS sidecar image digest to use, takes precedence over `fips.image.tag` if specified.
-    digest: sha256:805ca1f367d8bcd06c319e0852ac30bd6c62246537cc679968f9cb10fbc8bdc5
+    digest: ""
 
     # fips.image.repository -- Override default registry + image.name for the FIPS sidecar container.
     repository:
