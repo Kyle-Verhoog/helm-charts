@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 3.70.8
+
+* Set default APM instrumentation InitContainer memory limit to 120Mi.
+
 ## 3.70.7
 
 * Set default `Agent` and `Cluster-Agent` version to `7.56.2`.
